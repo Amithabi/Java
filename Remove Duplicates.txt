@@ -1,0 +1,16 @@
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        SortedSet<Integer> h=new TreeSet<>();
+        for(int i=0;i<nums.length;i++)
+        {
+            h.add(nums[i]);
+        }
+        int j=0;
+        for(int val :h)
+        {
+            nums[j]=val;
+            j++;
+        }
+        return h.size();
+        }
+    }
